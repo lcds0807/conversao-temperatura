@@ -16,7 +16,7 @@ spec:
       - name: webct
         image: lcds0807/conversao-temperatura:v2
         ports:
-        - containerPort: 5000
+        - containerPort: 8080
 ---
 # Service da aplicação
 apiVersion: v1 
@@ -28,6 +28,6 @@ spec:
     app: webct 
   ports:
   - port: 80
-    targetPort: 5000
-    nodePort: 30001
+    targetPort: 8080
+    nodePort: 30000
   type: LoadBalancer       
